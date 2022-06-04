@@ -39,11 +39,10 @@ function Todo() {
     // console.log(items);
     putItems(newItems);
     // console.log(items);
-    const handleAdd = text => {
-      putItems([...items, { key: getKey(), text, done: false }]);
-    };
   };
-  
+  const handleAdd = text => {
+      putItems([...items, { key: getKey(), text, done: false }]);
+  };
   return (
     <div className="panel">
       <div className="panel-heading">
