@@ -39,6 +39,9 @@ function Todo() {
     // console.log(items);
     putItems(newItems);
     // console.log(items);
+    const handleAdd = text => {
+      putItems([...items, { key: getKey(), text, done: false }]);
+    };
   };
   
   return (
@@ -46,6 +49,7 @@ function Todo() {
       <div className="panel-heading">
         ITSS ToDoアプリ
       </div>
+      <Input onAdd={handleAdd} />
       {items.map(item => (
         <TodoItem 
           key={item.key}
